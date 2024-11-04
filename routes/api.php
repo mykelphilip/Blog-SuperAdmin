@@ -7,10 +7,10 @@ use App\Http\Controllers\BlogController;
 
 
 //SUPER ADMIN 
-Route::get('/', [apiController::class, 'index'])->name('superadmin');
+Route::get('/admin/users', [apiController::class, 'index'])->name('superadmin');
 
 //SUPER ADMIN BLOGS
-Route::get('/home', [BlogController::class, 'index']);
+Route::get('/admin/home', [BlogController::class, 'index']);
 
 //REGISTRATION ROUTE
 Route::post('/register',  [apiController::class, 'register']);
